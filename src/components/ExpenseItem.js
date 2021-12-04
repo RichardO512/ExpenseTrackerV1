@@ -9,6 +9,10 @@ import "./ExpenseItem.css";
 
 const ExpenseItem = () => {
 
+    const expenseDate= new Date(2022,2,13);
+    const expenseTitle= "Car Insurance";
+    const expenseAmount = 10000;
+
     return (
 
         // the className are like class in javascript
@@ -16,10 +20,10 @@ const ExpenseItem = () => {
         // are like in css or html class like a selector i guess? IM NOT SURE
         <div className="expense-item">
 
-           <div>January 13th, 2022</div>
+           <div>{expenseDate.toISOString()}</div>
            <div className="expense-item__description">
-                <h2>Car Insurance</h2>
-                <div className="expense-item__price">Php10,000</div>
+                <h2>{expenseTitle}</h2>
+                <div className="expense-item__price">Php{expenseAmount}</div>
            </div>
         </div>
     );
